@@ -1,1 +1,5 @@
 all_pds.csv filter=lfs diff=lfs merge=lfs -text
+census_data_wa.geojson filter=lfs diff=lfs merge=lfs -text
+census_data_wa_2018.geojson filter=lfs diff=lfs merge=lfs -text
+wa_stp_stops_tracts_2018.geojson filter=lfs diff=lfs merge=lfs -text
+data/** filter=lfs diff=lfs merge=lfs -text

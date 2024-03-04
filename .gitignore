@@ -1,3 +1,9 @@
+data/wa_stp_stops.csv
+data/all_pds.csv
+data/census_data_wa.geojson
+.DS_Store
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
