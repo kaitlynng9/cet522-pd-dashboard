@@ -11,6 +11,6 @@ To read in data:
 
 `census_gdf = gpd.read_file("data/census_data_wa_2018.geojson")`  
 
-`pd_gdf = gpd.read_file("data/wa_stp_stops_tracts_2018.geojson")`
+`stops_gdf = gpd.read_file("data/wa_stp_stops_tracts_2018.geojson")`
 
   
