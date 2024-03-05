@@ -49,19 +49,6 @@ tooltip = GeoJsonTooltip(
     max_width=800,
 )
 
-# folium.GeoJson(
-#     df,
-#     style_function=lambda x: {
-#         "fillColor": colormap(x["properties"]["change"])
-#         if x["properties"]["change"] is not None
-#         else "transparent",
-#         "color": "black",
-#         "fillOpacity": 0.4,
-#     },
-#     tooltip=tooltip,
-#     popup=popup,
-# ).add_to(m)
-
 folium.Choropleth(
     geo_data=census_gdf,
     name="Census Data",
@@ -96,36 +83,3 @@ folium.GeoJson(
 # colormap.add_to(m)
 
 output = st_folium(m, width=700, height=500)
-
-# left, right = st.columns(2)
-# with left:
-#     st.write("## Tooltip")
-#     st.write(output["last_object_clicked_tooltip"])
-# with right:
-#     st.write("## Popup")
-#     st.write(output["last_object_clicked_popup"])
-
-# st.divider()
-
-#############################################
-# st.markdown("""## `GeoPandas`
-# GeoPandas and streamlit do not interact perfectly for polygons and lines. 
-# However, we can extract X / Y point data from GeoDataFrames and plot simply. To do so, creat a `lat` and `long` column. To do so, I will read a shapefile from lecture 13 and assign two new columns:
-# ```python
-# df = gpd.read_file("zip://./geopandas-tutorial/data/ne_110m_populated_places.zip", engine="pyogrio")
-
-# df['lon'] = df.geometry.x  # extract longitude from geometry
-# df['lat'] = df.geometry.y  # extract latitude from geometry
-# df = df[['lon','lat']]     # only keep longitude and latitude
-# st.write(df.head())        # show on table for testing only
-# st.map(df) 
-# ```
-# """)
-
-# df = gpd.read_file("zip://./geopandas-tutorial/data/ne_110m_populated_places.zip", engine="pyogrio")
-
-# df['lon'] = df.geometry.x 
-# df['lat'] = df.geometry.y 
-# df = df[['lon','lat']]     
-# st.write(df.head())  
-# st.map(df) 
